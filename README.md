@@ -39,12 +39,12 @@ This reutrns a HTML object with public holidays from a given year and country.
 
 (Countrycode examples: CA, CN, DE, FR, GB, US... )
 
-The endpoint is: /publicholidays/year/<year you want to check>/countrycode/<countrycode you want to check>.html
+The endpoint is: /publicholidays/year/{year you want to check}/countrycode/{countrycode you want to check}.html
 
 ## To Run
 
 ```
-python3 -m main
+python -m main
 ```
 
 (Ctrl + C to quit)
