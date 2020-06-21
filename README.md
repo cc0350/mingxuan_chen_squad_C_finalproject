@@ -21,9 +21,9 @@ pip install json2html
 ### First Endpoint (returns json)
 This returns a simple JSON object with exchange rates from your base currency to other currencies.
 
-(e.g.CAD, CNY, EUR, GBP, HKD, JPY, USD...)
+(Base currency available: USD, EUR)
 
-The endpoint is: /exchangerate/currency/<your base currency>.json
+The endpoint is: /exchangerate/currency/{your base currency}.json
 
 ### Seond Endpoint (returns html)
 This reutrns a HTML object with confirmed cases for a country for a specific time period.
@@ -32,7 +32,7 @@ This reutrns a HTML object with confirmed cases for a country for a specific tim
 
 *Note: Date format should be YYYY-MM-DD
 
-The endpoint is: /covid19/country/<country you want to check>/from/<start date>/to/<end date>.html
+The endpoint is: /covid19/country/{country you want to check}/from/{start date}/to/{end date}.html
 
 ### Third Endpoint (returns html)
 This reutrns a HTML object with public holidays from a given year and country.
