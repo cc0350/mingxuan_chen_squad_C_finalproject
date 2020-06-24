@@ -1,7 +1,7 @@
 # Final Project
 (By Mingxuan Chen, Squad C)
 
-Simple flask server that returns exchange rates, covid-19 cases and public holidays via python module. 
+Simple flask server that returns covid-19 related information via python module. 
 
 ## To Build
 
@@ -13,33 +13,31 @@ Ensure you have:
 
 ```
 pip install flask --user
-pip install yfinance --user
+pip install requests --user
 pip install json2html
 ```
 
 ## Instrcutions 
 ### First Endpoint (returns json)
-This returns a simple JSON object with exchange rates from your base currency to other currencies.
+Returns all the available countries and provinces, as well as the country slug for per country requests.
 
-(Base currency available: USD, EUR)
-
-The endpoint is: /exchangerate/currency/{your base currency}.json
+The endpoint is: /covid19/CountryInformation.json
 
 ### Seond Endpoint (returns html)
-This reutrns a HTML object with confirmed cases for a country for a specific time period.
+Returns all cases by case type for a country from the first recorded case. 
 
-(Country examples: United States, United Kindom, Italy, Cananda, Switzerland...)
+(Country examples: United States, United Kindom, Italy, Cananda, Switzerland...) You can also refer to the first endpoint. 
+
+The endpoint is: /covid19/country/{input country}/allcases.html
+
+### Third Endpoint (returns html)
+Returns summary by case types for a country during a specific time period.
+
+(Country examples: United States, United Kindom, Italy, Cananda, Switzerland...) You can also refer to the first endpoint. 
 
 *Note: Date format should be YYYY-MM-DD
 
-The endpoint is: /covid19/country/{country you want to check}/from/{start date}/to/{end date}.html
-
-### Third Endpoint (returns html)
-This reutrns a HTML object with public holidays from a given year and country.
-
-(Countrycode examples: CA, CN, DE, FR, GB, US... )
-
-The endpoint is: /publicholidays/year/{year you want to check}/countrycode/{countrycode you want to check}.html
+The endpoint is: /covid19/summary/country/{input country}/from/{input start date}/to/{input end date}.html
 
 ## To Run
 
